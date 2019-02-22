@@ -1,0 +1,12 @@
+Mediatore è una piccola applicazione rest sviluppata in python2.7 con la libreria unirest.
+
+Per avviarla:
+
+1) Creare un ambiente virtuale (chiamato env per semplicità) con il comando:
+    "virtualenv -p /usr/bin/python2.7 env"
+2) spostarsi nella cartella env e digitare:
+    "source bin/activate"
+3) eseguire il comando:
+    "pip install unirest"
+3) ad installazione terminata si potrà avviare il programma e provare come
+mediatore di prova con il codice "rodolfo"
