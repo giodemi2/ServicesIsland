@@ -1,0 +1,8 @@
+{
+	"url" : "jdbc:postgresql://tantor.db.elephantsql.com:5432/clbwfexq",
+	"host" : "tantor.db.elephantsql.com",
+	"DB_Vendor" : "postgresql",
+	"port" : "5432",
+	"user" : "clbwfexq",
+	"password" : "WhDf3DdXmdH5Iupu1BFjD6n7Z4CJ1lrS"
+}
