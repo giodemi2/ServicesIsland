@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="keywords" content="">
+    <meta name="author" content="">
+
+    <title>Services Island - Documentation</title>
+
+    
+      <link href="http://fonts.googleapis.com/css?family=Roboto:100,300,400,700" rel="stylesheet">
+      <link href="css/application-minimal.css" rel="stylesheet">
+      <link href="css/toolkit-minimal.css" rel="stylesheet">
+    
+
+    
+      <link href="css/docs.css" rel="stylesheet">
+    
+
+    <style>
+      /* note: this is a hack for ios iframe for bootstrap themes shopify page */
+      /* this chunk of css is not part of the toolkit :) */
+      /* …curses ios, etc… */
+      @media (max-width: 768px) and (-webkit-min-device-pixel-ratio: 2) {
+        body {
+          width: 1px;
+          min-width: 100%;
+          *width: 100%;
+        }
+        #stage {
+          height: 1px;
+          overflow: auto;
+          min-height: 100vh;
+          -webkit-overflow-scrolling: touch;
+        }
+      }
+    </style>
+  </head>
+
+
+<body>
+  <!-- <div class="stage-shelf hidden" id="sidebar">
+  <ul class="nav nav-bordered nav-stacked flex-column">
+    <li class="nav-header">Examples</li>
+    <li class="nav-item">
+      <a class="nav-link" href="../index.html">Startup</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" href="../minimal/index.html">Minimal</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" href="../bold/index.html">Bold</a>
+    </li>
+    <li class="nav-divider"></li>
+    <li class="nav-header">Docs</li>
+    <li class="nav-item">
+      <a class="nav-link active" href="../docs/index.html">Toolkit</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" href="http://getbootstrap.com">Bootstrap</a>
+    </li>
+  </ul>
+</div> -->
+
+
+  <div class="stage" id="app-stage">
+
+    <!-- <button class="btn btn-link stage-toggle" data-target="#app-stage" data-toggle="stage">
+      <span class="icon icon-menu stage-toggle-icon"></span>
+      Menu
+    </button> -->
+
+    
+      <div class="docs-header" id="content">
+        <div class="container">
+          <h1>Services Island</h1>
+          <p>Documentazione in italiano del progetto Services Island.</p>
+        </div>
+      </div>
+      <div class="container docs-content">
+
+
+<ul id="markdown-toc">
+  <li><a href="#contents" id="markdown-toc-contents">Contents</a></li>
+  <li><a href="#intro" id="markdown-toc-intro">Introduzione</a></li>
+  <li><a href="#architettura" id="markdown-toc-intro">Architettura</a></li>
+  <li><a href="#javadoc" id="markdown-toc-intro">Javadoc</a></li>
+  <li><a href="#tecnologieUtilizzate" id="markdown-toc-intro">Tecnologie Utilizzate</a></li>
+  <li><a href="#tecnologieUtilizzate" id="markdown-toc-intro">Tecnologie Utilizzate</a></li>
+  <li><a href="#repo" id="markdown-toc-whats-included">Repository</a>    <ul>
+      <li><a href="#testsModel" id="markdown-toc-getting-started">Tests Model</a></li>
+      <li><a href="#testsSite" id="markdown-toc-gulpfilejs">Tests Site</a></li>
+    </ul>
+  </li>
+  
+</ul>
+
+<h1 id="intro">Introduzione</h1>
+<p>Documentazione relativa alla parte implementativa di Services Island.<br>Per questioni di tempo, abbiamo caricato questa parte online in quanto non siamo riusciti ancora ad avere un'implementazione concreta da testare <strong>Questa pagina è in continnuo aggiornamento.</strong></p>
+
+
+  
+
+
+<h1 id="architettura">Architettura</h1>
+<img src="assets/Architettura.png" class="img-fluid">
+<ul style="margin-top: 10px; margin-bottom: 0pt;">
+  <li style="list-style-type: disc; font-size: 11pt; font-family: 'Open Sans'; color: #000000; background-color: transparent; font-weight: 400; font-variant: normal; text-decoration: none; vertical-align: baseline; white-space: pre;"><strong><span style="font-size: 11pt; font-family: 'Open Sans'; color: #000000; background-color: transparent; font-variant: normal; text-decoration: none; vertical-align: baseline; white-space: pre-wrap;">Model</span></strong><span style="font-size: 11pt; font-family: 'Open Sans'; color: #000000; background-color: transparent; font-weight: 400; font-variant: normal; text-decoration: none; vertical-align: baseline; white-space: pre-wrap;">: Maven Project che utilizza il pattern DAO e Jdbc </span><span style="font-size: 11pt; font-family: 'Open Sans'; color: #000000; background-color: transparent; font-weight: 400; font-variant: normal; text-decoration: underline; -webkit-text-decoration-skip: none; text-decoration-skip-ink: none; vertical-align: baseline; white-space: pre-wrap;">(Parte Model dell&rsquo;architettura MVC)</span></li>
+  <ul style="margin-top: 0pt; margin-bottom: 0pt;">
+  <li style="list-style-type: circle; font-size: 11pt; font-family: 'Open Sans'; color: #000000; background-color: transparent; font-weight: 400; font-variant: normal; text-decoration: none; vertical-align: baseline; white-space: pre;"><span style="font-size: 11pt; font-family: 'Open Sans'; color: #000000; background-color: transparent; font-weight: 400; font-variant: normal; text-decoration: none; vertical-align: baseline; white-space: pre-wrap;">Il sottopackage </span><strong><span style="font-size: 11pt; font-family: 'Open Sans'; color: #000000; background-color: transparent; font-variant: normal; text-decoration: none; vertical-align: baseline; white-space: pre-wrap;">Model</span></strong><span style="font-size: 11pt; font-family: 'Open Sans'; color: #000000; background-color: transparent; font-weight: 400; font-variant: normal; text-decoration: none; vertical-align: baseline; white-space: pre-wrap;"> gestir&agrave; i dati in maniera astratta interfacciandosi con connection</span></li>
+  <li style="list-style-type: circle; font-size: 11pt; font-family: 'Open Sans'; color: #000000; background-color: transparent; font-weight: 400; font-variant: normal; text-decoration: none; vertical-align: baseline; white-space: pre;"><span style="font-size: 11pt; font-family: 'Open Sans'; color: #000000; background-color: transparent; font-weight: 400; font-variant: normal; text-decoration: none; vertical-align: baseline; white-space: pre-wrap;">Il sottopackage </span><strong><span style="font-size: 11pt; font-family: 'Open Sans'; color: #000000; background-color: transparent; font-variant: normal; text-decoration: none; vertical-align: baseline; white-space: pre-wrap;">Connection</span></strong><span style="font-size: 11pt; font-family: 'Open Sans'; color: #000000; background-color: transparent; font-weight: 400; font-variant: normal; text-decoration: none; vertical-align: baseline; white-space: pre-wrap;"> far&agrave; da &ldquo;ponte&rdquo; tra Model e Persistence</span></li>
+  <li style="list-style-type: circle; font-size: 11pt; font-family: 'Open Sans'; color: #000000; background-color: transparent; font-weight: 400; font-variant: normal; text-decoration: none; vertical-align: baseline; white-space: pre;"><span style="font-size: 11pt; font-family: 'Open Sans'; color: #000000; background-color: transparent; font-weight: 400; font-variant: normal; text-decoration: none; vertical-align: baseline; white-space: pre-wrap;">Il sottopackage </span><strong><span style="font-size: 11pt; font-family: 'Open Sans'; color: #000000; background-color: transparent; font-variant: normal; text-decoration: none; vertical-align: baseline; white-space: pre-wrap;">Persistance</span></strong><span style="font-size: 11pt; font-family: 'Open Sans'; color: #000000; background-color: transparent; font-weight: 400; font-variant: normal; text-decoration: none; vertical-align: baseline; white-space: pre-wrap;"> gestir&agrave; tutta la parte fisica riguardante la persistenza dei dati. Persistence effettivamente &egrave; quel sottopackage che si interfaccia con il Database</span></li>
+  </ul>
+  <li style="list-style-type: disc; font-size: 11pt; font-family: 'Open Sans'; color: #000000; background-color: transparent; font-weight: 400; font-variant: normal; text-decoration: none; vertical-align: baseline; white-space: pre;"><strong><span style="font-size: 11pt; font-family: 'Open Sans'; color: #000000; background-color: transparent; font-variant: normal; text-decoration: none; vertical-align: baseline; white-space: pre-wrap;">Site</span></strong><span style="font-size: 11pt; font-family: 'Open Sans'; color: #000000; background-color: transparent; font-weight: 400; font-variant: normal; text-decoration: none; vertical-align: baseline; white-space: pre-wrap;">: Tipica applicazione Java EE implementata su server Tomcat (Maven Archetype Site) </span><span style="font-size: 11pt; font-family: 'Open Sans'; color: #000000; background-color: transparent; font-weight: 400; font-variant: normal; text-decoration: underline; -webkit-text-decoration-skip: none; text-decoration-skip-ink: none; vertical-align: baseline; white-space: pre-wrap;">(Parti View e Controller dell&rsquo;architettura MVC)</span></li>
+  <ul style="margin-top: 0pt; margin-bottom: 0pt;">
+  <li style="list-style-type: circle; font-size: 11pt; font-family: 'Open Sans'; color: #000000; background-color: transparent; font-weight: 400; font-variant: normal; text-decoration: none; vertical-align: baseline; white-space: pre;"><span style="font-size: 11pt; font-family: 'Open Sans'; color: #000000; background-color: transparent; font-weight: 400; font-variant: normal; text-decoration: none; vertical-align: baseline; white-space: pre-wrap;">Il sottopackage </span><strong><span style="font-size: 11pt; font-family: 'Open Sans'; color: #000000; background-color: transparent; font-variant: normal; text-decoration: none; vertical-align: baseline; white-space: pre-wrap;">Businesslogic</span></strong><span style="font-size: 11pt; font-family: 'Open Sans'; color: #000000; background-color: transparent; font-weight: 400; font-variant: normal; text-decoration: none; vertical-align: baseline; white-space: pre-wrap;"> controller&agrave; le interazioni con il model e creer&agrave; un livello di astrazione sui dati. In generale in businesslogic ci saranno le Servlet e le classi di utilit&agrave; </span><span style="font-size: 11pt; font-family: 'Open Sans'; color: #000000; background-color: transparent; font-weight: 400; font-variant: normal; text-decoration: underline; -webkit-text-decoration-skip: none; text-decoration-skip-ink: none; vertical-align: baseline; white-space: pre-wrap;">(Parte Controller dell&rsquo;architettura MVC)</span></li>
+  <li><span style="font-size: 11pt; font-family: 'Open Sans'; color: #000000; background-color: transparent; font-weight: 400; font-variant: normal; text-decoration: none; vertical-align: baseline; white-space: pre-wrap;">Il sottopackage </span><strong><span style="font-size: 11pt; font-family: 'Open Sans'; color: #000000; background-color: transparent; font-variant: normal; text-decoration: none; vertical-align: baseline; white-space: pre-wrap;">View</span></strong><span style="font-size: 11pt; font-family: 'Open Sans'; color: #000000; background-color: transparent; font-weight: 400; font-variant: normal; text-decoration: none; vertical-align: baseline; white-space: pre-wrap;"> implementativamente non rappresenta un vero package, ma associamo nella nostra architettura view, alle pagine jsp contenute nella cartella "webapp" </span><span style="font-size: 11pt; font-family: 'Open Sans'; color: #000000; background-color: transparent; font-weight: 400; font-variant: normal; text-decoration: underline; -webkit-text-decoration-skip: none; text-decoration-skip-ink: none; vertical-align: baseline; white-space: pre-wrap;">(Parte View dell&rsquo;architettura MVC)</span></li>
+  </ul>
+  </ul>
+
+  <p><span style="font-size: 11pt; font-family: 'Open Sans'; color: #000000; background-color: transparent; font-weight: 400; font-variant: normal; text-decoration: underline; -webkit-text-decoration-skip: none; text-decoration-skip-ink: none; vertical-align: baseline; white-space: pre-wrap;">&nbsp;</span></p>
+
+
+
+
+  <h1 id="javadoc">Javadoc</h1>
+  <div>
+    <p>Generabile tramite il comando "mvn javadoc:javadoc"</p>
+      <ul>
+        <li>
+          <p>Progetto <a href="Site/apidocs/index.html">Site</a></p>
+        </li>
+        <li>
+          <p>Progetto <a href="Model/apidocs/index.html">Model</a></p>
+        </li>
+      </ul>
+    </div>
+
+
+
+    <h1 id="tecnologieUtilizzate">Tecnologie Utilizzate</h1>
+    <ul style="margin-top: 0pt; margin-bottom: 0pt;">
+        <li style="list-style-type: disc; font-size: 11pt; font-family: Arial; color: #000000; background-color: transparent; font-weight: 400; font-variant: normal; text-decoration: none; vertical-align: baseline; white-space: pre;"><strong><span style="font-size: 11pt; font-family: Arial; color: #000000; background-color: transparent; font-variant: normal; text-decoration: none; vertical-align: baseline; white-space: pre-wrap;">Linguaggi di programmazione</span></strong><span style="font-size: 11pt; font-family: Arial; color: #000000; background-color: transparent; font-weight: 400; font-variant: normal; text-decoration: none; vertical-align: baseline; white-space: pre-wrap;">: Java 8, Javascript ES6, html 5, css 3 (gli ultimi due li consideriamo "linguaggi")</span></li>
+        </ul>
+        <p>&nbsp;</p>
+        <ul>
+        <li style="list-style-type: disc; font-size: 11pt; font-family: Arial; color: #000000; background-color: transparent; font-variant: normal; text-decoration: none; vertical-align: baseline; white-space: pre;"><strong><span style="font-size: 11pt; font-family: Arial; color: #000000; background-color: transparent; font-variant: normal; text-decoration: none; vertical-align: baseline; white-space: pre-wrap;">Framework e tecnologie</span><span style="font-size: 11pt; font-family: Arial; color: #000000; background-color: transparent; font-weight: 400; font-variant: normal; text-decoration: none; vertical-align: baseline; white-space: pre-wrap;">: JaveEE con Apache Tomcat, Bootstrap, JQuery, API pagamenti (ancora da scegliere), MySql, PostgreSql</span></strong></li>
+        </ul>
+        <p>&nbsp;</p>
+        <ul style="margin-top: 0pt; margin-bottom: 0pt;">
+        <li style="list-style-type: disc; font-size: 11pt; font-family: Arial; color: #000000; background-color: transparent; font-weight: 400; font-variant: normal; text-decoration: none; vertical-align: baseline; white-space: pre;"><strong><span style="font-size: 11pt; font-family: Arial; color: #000000; background-color: transparent; font-variant: normal; text-decoration: none; vertical-align: baseline; white-space: pre-wrap;">Build Tools</span></strong><span style="font-size: 11pt; font-family: Arial; color: #000000; background-color: transparent; font-weight: 400; font-variant: normal; text-decoration: none; vertical-align: baseline; white-space: pre-wrap;">: Apache Maven</span></li>
+        </ul>
+        <p>&nbsp;</p>
+        <ul>
+        <li style="list-style-type: disc; font-size: 11pt; font-family: Arial; color: #000000; background-color: transparent; font-variant: normal; text-decoration: none; vertical-align: baseline; white-space: pre;"><strong><span style="font-size: 11pt; font-family: Arial; color: #000000; background-color: transparent; font-variant: normal; text-decoration: none; vertical-align: baseline; white-space: pre-wrap;">Tools Disegno</span><span style="font-size: 11pt; font-family: Arial; color: #000000; background-color: transparent; font-weight: 400; font-variant: normal; text-decoration: none; vertical-align: baseline; white-space: pre-wrap;">: draw.io, websequencediagrams.com</span></strong></li>
+        </ul>
+        <ul>
+        <li style="list-style-type: disc; font-size: 11pt; font-family: Arial; color: #000000; background-color: transparent; font-variant: normal; text-decoration: none; vertical-align: baseline; white-space: pre;"><strong><span style="font-size: 11pt; font-family: Arial; color: #000000; background-color: transparent; font-variant: normal; text-decoration: none; vertical-align: baseline; white-space: pre-wrap;">Ide</span></strong><span style="font-size: 11pt; font-family: Arial; color: #000000; background-color: transparent; font-weight: 400; font-variant: normal; text-decoration: none; vertical-align: baseline; white-space: pre-wrap;">: Eclipse, Visual Studio Code (per le pagine statiche)</span></li>
+        </ul>
+        <ul>
+        <li style="list-style-type: disc; font-size: 11pt; font-family: Arial; color: #000000; background-color: transparent; font-variant: normal; text-decoration: none; vertical-align: baseline; white-space: pre;"><strong><span style="font-size: 11pt; font-family: Arial; color: #000000; background-color: transparent; font-variant: normal; text-decoration: none; vertical-align: baseline; white-space: pre-wrap;">Issue Tracking</span></strong><span style="font-size: 11pt; font-family: Arial; color: #000000; background-color: transparent; font-weight: 400; font-variant: normal; text-decoration: none; vertical-align: baseline; white-space: pre-wrap;">: Atlassian Trello e strumenti di BitBucket (per ora abbandonati, in quanto migrati a GitHub), Google Drive</span></li>
+        </ul>
+        <ul>
+        <li style="list-style-type: disc; font-size: 11pt; font-family: Arial; color: #000000; background-color: transparent; font-variant: normal; text-decoration: none; vertical-align: baseline; white-space: pre;"><strong><span style="font-size: 11pt; font-family: Arial; color: #000000; background-color: transparent; font-variant: normal; text-decoration: none; vertical-align: baseline; white-space: pre-wrap;">Software Versioning</span></strong><span style="font-size: 11pt; font-family: Arial; color: #000000; background-color: transparent; font-weight: 400; font-variant: normal; text-decoration: none; vertical-align: baseline; white-space: pre-wrap;">: Git</span></li>
+        </ul>
+        <p style="padding-left: 30px;">&nbsp;</p>
+        <ul>
+        <li><strong><span style="font-size: 11pt; font-family: Arial; color: #000000; background-color: transparent; font-variant: normal; text-decoration: none; vertical-align: baseline; white-space: pre-wrap;">Testing</span></strong><span style="font-size: 11pt; font-family: Arial; color: #000000; background-color: transparent; font-weight: 400; font-variant: normal; text-decoration: none; vertical-align: baseline; white-space: pre-wrap;">: Junit</span></li>
+        </ul>
+        <p>&nbsp;</p>
+        <p><span style="font-size: 11pt; font-family: 'Open Sans'; color: #000000; background-color: transparent; font-weight: 400; font-variant: normal; text-decoration: underline; -webkit-text-decoration-skip: none; text-decoration-skip-ink: none; vertical-align: baseline; white-space: pre-wrap;">&nbsp;</span></p>
+
+
+  <h1 id="repo">Repository</h1>
+<div>
+  <p>Il repository è diviso in 2 branch principali:</p>
+  <ul>
+    <li>
+      <p><strong>master</strong> rappresenta il branch di default e contiene le milestone</p>
+    </li>
+    <li>
+      <p><strong>dev</strong> rappresenta il branch di sviluppo.  in esso verranno messe in modo coerente tutte le modifiche fatte</p>
+    </li>
+  </ul>
+</div>
+
+
+
+  <h1 id="tests">Tests</h1>
+  <p>Tests effettuati con Junit, generabili tramite il comanto "mvn test"</p>
+  <h2 id="testsModel">Tests Model</h2>
+  <p>Work in progress</p>
+  <h2 id="testsSite">Tests Site</h2>
+  <p>Work in progress</p>
+
+
+
+
+
+
+
+<a class="docs-top" style="display: none" href="#">Torna Sopra</a>
+  </div>
+
+  </div>
+
+    <script src="../Site/src/main/webapp/assets/script/jquery.min.js"></script>
+    <script src="../Site/src/main/webapp/assets/script/tether.min.js"></script>
+    <script src="../Site/src/main/webapp/assets/script/toolkit.js"></script>
+    <script src="../Site/src/main/webapp/assets/script/application.js"></script>
+
+  </body>
+</html>
+
+
